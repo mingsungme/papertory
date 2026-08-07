@@ -228,3 +228,29 @@
 **참고**
 - 각 슬라이드 문구는 최종 HTML(s1~s10) 기준으로 확정됨 — 실제 피그마 슬라이드로 옮길 때 이 문서를 1차 대본으로 사용
 - 전체 분량은 26.7.31 피드백 기준 "디자이너 과정이므로 디자인 시스템 파트 유지" 원칙 참고
+
+### 재개용 프롬프트 (다른 컴퓨터/새 세션에서 이어갈 때 그대로 붙여넣기)
+
+```
+나는 "페이퍼토리" 팀 프로젝트를 기반으로 UXUI 디자이너 포트폴리오를 만들고 있어.
+개인 포크 저장소(GitHub: mingsungme/papertory)에서 작업 중이고,
+브랜치는 portfolio/kms-uxui-slides — 최신 상태는 이미 main에 머지돼 있어.
+
+핵심 파일 (전부 portfolio/ 폴더 안):
+- kms_uxui_portfolio_draft.html — 최종 10슬라이드 스크롤형 HTML 아티팩트 (실제 산출물)
+- kms_uxui_portfolio_script.md — 발표 대본. 맨 아래 "다음 단계 메모" 섹션에
+  지금까지 상태·할 일·걸리는 일·계획 필요한 일이 정리돼 있음 — 먼저 이거부터 읽어줘
+- kms_slide_design_system.md — 다른 프로젝트에도 재사용할 슬라이드 디자인 시스템 문서
+
+팀 실제 발표용 Figma Slides 파일(https://www.figma.com/slides/WA5BYPUtwWx5Q2ll1spH4C)에도
+별도로 신설 슬라이드 2건을 만들어 반영해뒀어 — Section 02 표지 뒤 "X 실제 반응" 슬라이드,
+Section 03 끝 "데이터 기반 근거 제시" 슬라이드(도넛차트 포함).
+
+먼저 kms_uxui_portfolio_script.md의 "다음 단계 메모" 섹션을 읽고 현재 상태를 파악한 다음
+이어서 작업해줘.
+
+주의: 이 저장소는 팀 공유 레포(aykim-portfolio/2_hk_uxui_05_teamproject_groupact)의
+포크야. 포트폴리오 관련 작업은 팀 레포가 아니라 반드시 내 개인 포크(mine 리모트)에만
+커밋·PR 올릴 것 — 팀 레포 쪽으로는 절대 PR 만들지 마.
+(새로 클론한 환경이면 git remote로 origin=팀 레포, mine=개인 포크 재설정 필요할 수 있음)
+```
