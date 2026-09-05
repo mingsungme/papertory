@@ -583,16 +583,25 @@
 <section class="slide" id="s2" data-label="문제 정의">
   <div class="wrap">
     <div class="eyebrow"><span class="num">01</span>문제 정의 &amp; 가설</div>
-    <h2>데이터와 사용자 조사를 오가며 문제를 좁혔습니다</h2>
-    <p class="lede">실제 데이터에서 출발해, 그 데이터를 직접 쿼리해 인사이트 도구로 쓰고, 사용자의 실제 반응과 대조한 뒤, 인터뷰로 여러 지점을 확인하고, 다시 데이터로 돌아와 어긋난 자리를 추적했습니다. 문제 정의는 그 왕복의 결과입니다.</p>
+    <h2>독자가 없는 게 아니라, 독자가 돌아올 길이 없었습니다</h2>
+    <p class="lede">유입이 줄고 있다는 증상에서 출발해, 데이터와 사용자 사이를 오가며 그 증상이 어디서 비롯됐는지까지 내려갔습니다. 아래는 그 순서입니다.</p>
 
     <ol class="flow">
       <li>
         <span class="fnum">1</span>
         <div class="fbody">
+          <span class="srctag field">문제 상황</span>
+          <h3>유입이 줄고 있다는 고민에서 시작했습니다</h3>
+          <p>과제를 받은 시점의 상황은 명확했습니다. 한경 디지털은 트래픽이 줄고 있었고, 체류 시간 감소와 이탈률 증가가 고착돼 있었습니다. 현업 담당자들도 &ldquo;구독 유입과 기사 조회 자체가 떨어지고 있다&rdquo;를 먼저 꺼냈습니다. 다만 <strong>이건 증상이지 문제가 아니었습니다</strong> — 유입이 왜 생기지 않는지를 알아야 무엇을 만들지 정할 수 있었습니다.</p>
+          <p class="evsrc">프로젝트 과제 정의(한국경제 디지털 트래픽 개선) · 한경 실무자 인터뷰 1차</p>
+        </div>
+      </li>
+      <li>
+        <span class="fnum">2</span>
+        <div class="fbody">
           <span class="srctag data">정량 데이터</span>
-          <h3>실제 데이터에서 출발했습니다</h3>
-          <p>한경 내부 리텐션·조회 대시보드(구글 루커스튜디오)와 GA4 채널별 세션을 근거로 삼았습니다. 세션 유입은 네이버 53.5%, 구글 44.2%로 검색에 97.7%가 묶여 있었고, SNS는 1.9%, AI는 0.5%에 그쳤습니다.</p>
+          <h3>유입의 97.7%가 검색에 묶여 있었습니다</h3>
+          <p>유입이 어디서 오는지부터 열어봤습니다. 한경 내부 리텐션·조회 대시보드(구글 루커스튜디오)와 GA4 채널별 세션이 근거입니다. 네이버 53.5%, 구글 44.2%로 검색이 97.7%였고, SNS는 1.9%, AI는 0.5%에 그쳤습니다. 검색 알고리즘이 한 번 바뀌면 트래픽 전체가 흔들리는 구조였습니다.</p>
           <div class="ga4chart">
             <div class="donut sm" role="img" aria-label="글로벌마켓 섹션 채널별 세션 유입 비중 — 네이버 53.5%, 구글 44.2%, SNS 1.9%, AI 0.5%"></div>
             <ul class="donut-legend">
@@ -606,38 +615,37 @@
         </div>
       </li>
       <li>
-        <span class="fnum">2</span>
-        <div class="fbody">
-          <span class="srctag data">SQL 쿼리</span>
-          <h3>데이터를 인사이트 도구로 썼습니다</h3>
-          <p>주어진 숫자를 받아보는 데 그치지 않고 직접 쿼리해 원하는 각도로 잘라봤습니다. LLM 페르소나 데이터셋(Nemotron-Personas-Korea, 약 100만 명)에서 &lsquo;자기계발·성장·경제&rsquo;가 한 사람 안에서 겹치는 층을 SQL로 필터링해, 겨냥하려는 타깃이 실제로 존재하는 규모인지부터 확인했습니다. <strong>여기서 추린 페르소나가 곧 4단계의 인터뷰 대상</strong>이 됐습니다 — 데이터로 뽑은 사람에게 데이터로 확인한 문제를 되물어본 셈입니다.</p>
-          <p class="evsrc">Nemotron-Personas-Korea SQL 필터링 — 이 페르소나로 &lsquo;지면 읽기 슬라이더&rsquo; 챗봇 인터뷰를 먼저 진행했고(가설 검증 단계), 피벗 이후 타겟을 다시 좁힐 때 같은 방식을 반복했습니다. 쿼리 원문은 &lsquo;타겟 재정의&rsquo; 장에 수록</p>
-        </div>
-      </li>
-      <li>
         <span class="fnum">3</span>
         <div class="fbody">
-          <span class="srctag field">사용자 반응</span>
-          <h3>실제 사용자 반응과 대조했습니다</h3>
-          <p>데이터만 보면 SNS 유입이 1.9%이므로 SNS에는 독자가 없어야 합니다. 그런데 X와 스레드에서는 한경 기사를 스스로 정리해 초심자에게 공유하는 게시물이 활발했고, 조회수도 수십만 단위였습니다. 데이터가 말하는 것과 사람들이 실제로 하는 행동이 어긋나 있었습니다.</p>
-          <p class="evsrc">X·스레드 실제 게시물 관찰 — 캡처 4건은 &lsquo;증명 및 대안&rsquo; 장에 수록</p>
+          <span class="srctag data">SQL 쿼리</span>
+          <h3>겨냥할 층이 실재하는지 먼저 확인했습니다</h3>
+          <p>주어진 숫자를 받아보는 데 그치지 않고 직접 쿼리해 원하는 각도로 잘랐습니다. LLM 페르소나 데이터셋(Nemotron-Personas-Korea, 약 100만 명)에서 &lsquo;자기계발·성장·경제&rsquo;가 한 사람 안에서 겹치는 층을 SQL로 필터링했습니다. <strong>이 층이 실재한다는 걸 먼저 확인했기 때문에, 뒤의 인터뷰가 &lsquo;있을 법한 사람&rsquo;이 아니라 실제로 있는 층을 상대로 한 것이 됐습니다.</strong> 여기서 추린 페르소나가 곧 5단계의 인터뷰 대상입니다.</p>
+          <p class="evsrc">Nemotron-Personas-Korea SQL 필터링 — 이 페르소나로 &lsquo;지면 읽기 슬라이더&rsquo; 챗봇 인터뷰를 먼저 진행했고(가설 검증 단계), 피벗 이후 타겟을 다시 좁힐 때 같은 방식을 반복했습니다. 쿼리 원문은 &lsquo;타겟 재정의&rsquo; 장에 수록</p>
         </div>
       </li>
       <li>
         <span class="fnum">4</span>
         <div class="fbody">
-          <span class="srctag user">인터뷰</span>
-          <h3>인터뷰로 여러 지점을 확인했습니다</h3>
-          <p>현업 담당자는 체류 시간과 기사 조회 하락을 먼저 문제로 짚었고, 2단계에서 추린 AI 페르소나 4인과 실제 FGI 참여자 모두에게서 전문용어·한자어 장벽과 &lsquo;저장은 해도 다시 열지 않는&rsquo; 기록 습관이 반복해서 나왔습니다.</p>
-          <p class="evsrc">한경 실무자 인터뷰 · FGI 20~30대 여성 5명 2026.07.14(실제 사용자) · AI 페르소나 인터뷰 4인 2026.07.13~14(시뮬레이션 — 사람 조사와 구분해 표기)</p>
+          <span class="srctag field">실제 반응</span>
+          <h3>데이터에 없는 독자가 X에는 있었습니다</h3>
+          <p>데이터만 보면 SNS 유입이 1.9%이므로 SNS에는 독자가 없어야 합니다. 그런데 X와 스레드에서는 한경 기사를 스스로 정리해 초심자에게 공유하는 게시물이 활발했고, 조회수도 수십만 단위였습니다. 데이터가 말하는 것과 사람들이 실제로 하는 행동이 어긋나 있었습니다.</p>
+          <p class="evsrc">X·스레드 실제 게시물 관찰 — 캡처 4건은 &lsquo;증명 및 대안&rsquo; 장에 수록</p>
         </div>
       </li>
       <li>
         <span class="fnum">5</span>
         <div class="fbody">
-          <span class="srctag ours">교차 검증</span>
-          <h3>다시 데이터로 돌아와 괴리를 추적했습니다</h3>
-          <p>어긋난 두 숫자를 나란히 놓고 원인을 좁혔습니다.</p>
+          <span class="srctag user">인터뷰</span>
+          <h3>저장은 해도 다시 열지 않았습니다</h3>
+          <p>현업 담당자는 체류 시간과 기사 조회 하락을 먼저 짚었고, 3단계에서 추린 AI 페르소나 4인과 실제 FGI 참여자 모두에게서 전문용어·한자어 장벽과 &lsquo;저장은 해도 다시 열지 않는&rsquo; 기록 습관이 반복해서 나왔습니다. 기능이 없어서가 아니라, 남긴 것이 다시 쓰이지 않는다는 이야기였습니다.</p>
+          <p class="evsrc">한경 실무자 인터뷰 · FGI 20~30대 여성 5명 2026.07.14(실제 사용자) · AI 페르소나 인터뷰 4인 2026.07.13~14(시뮬레이션 — 사람 조사와 구분해 표기)</p>
+        </div>
+      </li>
+      <li>
+        <span class="fnum">6</span>
+        <div class="fbody">
+          <span class="srctag data">교차 검증</span>
+          <h3>어긋난 두 숫자를 나란히 놓았습니다</h3>
           <div class="gapbox">
             <div class="gapfig">
               <span class="gnum">1.9%</span>
@@ -652,21 +660,30 @@
           </div>
         </div>
       </li>
+      <li>
+        <span class="fnum">7</span>
+        <div class="fbody">
+          <span class="srctag ours">우리 정의</span>
+          <h3>그래서 문제를 이렇게 정의했습니다</h3>
+          <p>기존 한경 앱에도 스크랩·하이라이트·메모는 이미 있습니다. 기능이 있어도 다시 열리지 않는다는 점까지 함께 놓으면, 풀어야 할 문제는 개별 기능의 부재가 아니었습니다.</p>
+          <div class="defbox">
+            <p>읽은 것이 기록으로 남지 않아, 다시 올 이유도 남에게 보여줄 것도 만들어지지 않는다 — <strong>젊은 독자가 자발적으로 공유하는 순환 구조가 생기지 않는다.</strong></p>
+            <p class="defnote">앞의 여섯 단계는 관찰된 사실이고, 이 문장은 그 사실을 하나로 묶어 내린 해석입니다. 근거와 해석을 구분해 적은 이유는, 가설이 부결됐을 때 무엇을 버리고 무엇을 남길지 판단하는 기준이 되기 때문입니다.</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <span class="fnum">8</span>
+        <div class="fbody">
+          <span class="srctag ours">가설 도출</span>
+          <h3>여기서 첫 가설이 나왔습니다</h3>
+          <div class="quote" style="margin-top:0;">&ldquo;경제 뉴스를 더 쉽고 재미있게 읽게 만들 방법이 없을까 — 그렇다면 <mark>게임 요소</mark>로 유입을 늘려보자&rdquo;
+            <cite>최초 가설 (검증 전)</cite>
+          </div>
+          <p class="evsrc">공유가 일어나지 않는 것이 문제라면 공유하고 싶어질 만큼의 재미를 더하면 된다 — 정의에서 가설로 넘어가는 이 한 칸이 타당한지, 다음 장에서 실제 사용자와 POC로 검증합니다.</p>
+        </div>
+      </li>
     </ol>
-
-    <div class="steplabel"><span class="sn">6</span>문제 정의 — 왕복 끝에 남은 한 문장</div>
-    <p class="note" style="margin:0 0 1rem;">기존 한경 앱에도 스크랩·하이라이트·메모는 이미 있습니다. 기능이 있어도 다시 열리지 않는다는 점까지 함께 놓으면, 풀어야 할 문제는 개별 기능의 부재가 아니었습니다.</p>
-    <div class="defbox">
-      <span class="srctag ours">우리 정의</span>
-      <p>읽어도 기록으로 남지 않고, 기록이 없으니 다시 올 이유도 남에게 보여줄 것도 생기지 않는다 — <strong>젊은 독자가 자발적으로 공유하는 순환 구조가 만들어지지 않는다.</strong></p>
-      <p class="defnote">앞의 다섯 단계는 관찰된 사실이고, 이 문장은 그 사실을 하나로 묶어 내린 해석입니다. 근거와 해석을 구분해 적은 이유는, 가설이 부결됐을 때 무엇을 버리고 무엇을 남길지 판단하는 기준이 되기 때문입니다.</p>
-    </div>
-
-    <div class="steplabel"><span class="sn">7</span>가설 도출 — 검증할 대상 설정</div>
-    <div class="quote">&ldquo;경제 뉴스를 더 쉽고 재미있게 읽게 만들 방법이 없을까 — 그렇다면 <mark>게임 요소</mark>로 유입을 늘려보자&rdquo;
-      <cite>최초 가설 (검증 전)</cite>
-    </div>
-    <p class="note" style="margin-top:1rem;">공유가 일어나지 않는 것이 문제라면 공유하고 싶어질 만큼의 재미를 더하면 된다 — 정의에서 가설로 넘어가는 이 한 칸이 타당한지, 다음 장에서 실제 사용자와 POC로 검증합니다.</p>
   </div>
 </section>
 
